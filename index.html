@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growfax Host</title>
+    <style>
+        /* Gaya Dasar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        
+        /* Header */
+        header {
+            background-color: #4CAF50; /* Warna hijau */
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        
+        /* Kontainer Utama */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        
+        /* Daftar Item Host */
+        .host-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Jarak antar item */
+        }
+        
+        /* Item Host */
+        .host-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 20px); /* 2 item per baris untuk layar lebar */
+            max-width: 200px; /* Batasan lebar agar tidak terlalu besar */
+            text-align: center;
+            transition: transform 0.2s;
+            box-sizing: border-box;
+        }
+        .host-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .host-item a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+        
+        /* Ikon Aplikasi */
+        .host-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            object-fit: contain;
+        }
+
+        /* Tombol Download/Gabung */
+        .download-button {
+            display: block;
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; 
+            box-sizing: border-box;
+        }
+        .download-button:hover {
+            background-color: #005f7b;
+        }
+
+        /* Gaya Khusus Discord */
+        .discord-item {
+            background-color: #7289DA !important; /* Warna ungu/biru Discord */
+            color: white;
+        }
+        .discord-item a {
+            color: white;
+        }
+        .discord-item .download-button {
+            background-color: #99AAB5;
+        }
+        .discord-item .download-button:hover {
+            background-color: #7d8f99;
+        }
+
+        /* Media Query untuk Layar Kecil (mis. Ponsel) */
+        @media (max-width: 600px) {
+            .host-item {
+                width: 100%; /* 1 item per baris di layar kecil */
+                max-width: none;
+            }
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Growfax Host</h1>
+        <p>Pilih file host yang ingin Anda unduh atau gabung ke Discord kami.</p>
+    </header>
+
+    <div class="container">
+        <div class="host-list">
+            
+            <div class="host-item">
+                <a href="GrowFax.txt" download>
+                    <img src="IMG_2970.jpeg" alt="Icon GrowFax" class="host-icon">
+                    <h3>Host GrowFax</h3>
+                    [cite_start]<p>File host untuk GrowFax[cite: 1].</p>
+                    <span class="download-button">Download Host</span>
+                </a>
+            </div>
+
+            <div class="host-item">
+                <a href="Ios.txt" download>
+                    <img src="IMG_2972.png" alt="Icon iOS" class="host-icon">
+                    <h3>Host iOS Config</h3>
+                    [cite_start]<p>File konfigurasi host untuk iOS/alat lainnya[cite: 3].</p>
+                    <span class="download-button">Download Host</span>
+                </a>
+            </div>
+            
+            <div class="host-item">
+                <a href="Powertunnel.txt" download>
+                    <img src="IMG_2969.png" alt="Icon Powertunnel" class="host-icon">
+                    <h3>Host Powertunnel</h3>
+                    [cite_start]<p>File host untuk Powertunnel[cite: 2].</p>
+                    <span class="download-button">Download Host</span>
+                </a>
+            </div>
+
+            <div class="host-item discord-item">
+                <a href="https://discord.gg/smgS6sq83y" target="_blank">
+                    <img src="IMG_2973.png" alt="Icon Discord" class="host-icon" style="background-color: transparent;">
+                    <h3 style="color: white;">Discord Komunitas</h3>
+                    <p>Gabung ke server Discord kami.</p>
+                    <span class="download-button">Gabung Sekarang</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
