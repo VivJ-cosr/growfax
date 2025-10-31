@@ -1,177 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Growfax Host</title>
-    <style>
-        /* Base Style */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-        
-        /* Header */
-        header {
-            background-color: #4CAF50; /* Green color */
-            color: white;
-            padding: 20px 0;
-            margin-bottom: 20px;
-        }
-        h1 {
-            margin: 0;
-        }
-        
-        /* Main Container */
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-        
-        /* Host Item List */
-        .host-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px; /* Space between items */
-        }
-        
-        /* Host Item */
-        .host-item {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: calc(50% - 20px); 
-            max-width: 200px; 
-            text-align: center;
-            transition: transform 0.2s;
-            box-sizing: border-box;
-        }
-        .host-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        .host-item a {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            height: 100%;
-        }
-        
-        /* Application Icon */
-        .host-icon {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 15px;
-            border-radius: 15px;
-            object-fit: contain;
-        }
-
-        /* Download/Join Button */
-        .download-button {
-            display: block;
-            background-color: #008CBA;
-            color: white;
-            padding: 10px 15px;
-            text-align: center;
-            font-size: 14px;
-            border-radius: 5px;
-            margin-top: 15px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            width: 100%; 
-            box-sizing: border-box;
-        }
-        .download-button:hover {
-            background-color: #005f7b;
-        }
-
-        /* Discord Specific Style */
-        .discord-item {
-            background-color: #7289DA !important; /* Discord's purple/blue color */
-            color: white;
-        }
-        .discord-item a {
-            color: white;
-        }
-        .discord-item .download-button {
-            background-color: #99AAB5;
-        }
-        .discord-item .download-button:hover {
-            background-color: #7d8f99;
-        }
-
-        /* Media Query for Small Screens (e.g., Mobile) */
-        @media (max-width: 600px) {
-            .host-item {
-                width: 100%; 
-                max-width: none;
-            }
-            .container {
-                width: 95%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growfax Host</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      margin-bottom: 20px;
+    }
+    h1 { margin: 0; }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+    .host-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .host-item {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: calc(50% - 20px);
+      max-width: 200px;
+      text-align: center;
+      transition: transform 0.2s;
+      box-sizing: border-box;
+    }
+    .host-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .host-item a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .host-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      object-fit: contain;
+    }
+    .download-button {
+      display: block;
+      background-color: #008CBA;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      font-size: 14px;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .download-button:hover {
+      background-color: #005f7b;
+    }
+    .discord-item {
+      background-color: #7289DA !important;
+      color: white;
+    }
+    .discord-item a {
+      color: white;
+    }
+    .discord-item .download-button {
+      background-color: #99AAB5;
+    }
+    .discord-item .download-button:hover {
+      background-color: #7d8f99;
+    }
+    @media (max-width: 600px) {
+      .host-item {
+        width: 100%;
+        max-width: none;
+      }
+      .container { width: 95%; }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Growfax Host</h1>
-        <p>Select the host file you wish to download or join our Discord.</p>
-    </header>
+  <header>
+    <h1>Growfax Host</h1>
+    <p>Select the host file you wish to download or join our Discord.</p>
+  </header>
 
-    <div class="container">
-        <div class="host-list">
-            
-            <div class="host-item">
-                <a href="GrowFax.txt" download>
-                    <img src="IMG_2970.jpeg" alt="GrowFax Icon" class="host-icon">
-                    <h3>Virtual Host - GrowFax</h3>
-                    <p>Host file for the GrowFax app.</p>
-                    <span class="download-button">Download Host</span>
-                </a>
-            </div>
+  <div class="container">
+    <div class="host-list">
 
-            <div class="host-item">
-                <a href="Powertunnel.txt" download>
-                    <img src="IMG_2969.png" alt="Powertunnel Icon" class="host-icon">
-                    <h3>Host - Powertunnel</h3>
-                    <p>Host file for the Powertunnel app.</p>
-                    <span class="download-button">Download Host</span>
-                </a>
-            </div>
+      <!-- Virtual Host - GrowFax -->
+      <div class="host-item">
+        <a href="Virtual host.txt" download>
+          <img src="IMG_2969.png" alt="GrowFax Icon" class="host-icon">
+          <h3>Virtual Host - GrowFax</h3>
+          <p>Host file for the GrowFax app.</p>
+          <span class="download-button">Download Host</span>
+        </a>
+      </div>
 
-            <div class="host-item">
-                <a href="Ios.txt" download>
-                    <img src="IMG_2972.png" alt="Surge 5 Icon" class="host-icon">
-                    <h3>Config - Surge 5 / iOS</h3>
-                    <p>Configuration file for Surge 5 / iOS.</p>
-                    <span class="download-button">Download Config</span>
-                </a>
-            </div>
-            
-            <div class="host-item discord-item">
-                <a href="https://discord.gg/smgS6sq83y" target="_blank">
-                    <img src="IMG_2973.png" alt="Discord Icon" class="host-icon" style="background-color: transparent;">
-                    <h3 style="color: white;">Community Discord</h3>
-                    <p>Join our Discord server now!</p>
-                    <span class="download-button">Join Now</span>
-                </a>
-            </div>
+      <!-- Powertunnel -->
+      <div class="host-item">
+        <a href="Powertunnel.txt" download>
+          <img src="IMG_2970.jpeg" alt="Powertunnel Icon" class="host-icon">
+          <h3>Host - Powertunnel</h3>
+          <p>Host file for the Powertunnel app.</p>
+          <span class="download-button">Download Host</span>
+        </a>
+      </div>
 
-        </div>
+      <!-- iOS / Surge 5 -->
+      <div class="host-item">
+        <a href="Ios.txt" download>
+          <img src="IMG_2972.png" alt="Surge 5 Icon" class="host-icon">
+          <h3>Config - Surge 5 / iOS</h3>
+          <p>Configuration file for Surge 5 / iOS.</p>
+          <span class="download-button">Download Config</span>
+        </a>
+      </div>
+
+      <!-- Discord -->
+      <div class="host-item discord-item">
+        <a href="https://discord.gg/smgS6sq83y" target="_blank">
+          <img src="IMG_2973.png" alt="Discord Icon" class="host-icon" style="background-color: transparent;">
+          <h3 style="color: white;">Community Discord</h3>
+          <p>Join our Discord server now!</p>
+          <span class="download-button">Join Now</span>
+        </a>
+      </div>
+
     </div>
+  </div>
 
 </body>
 </html>
