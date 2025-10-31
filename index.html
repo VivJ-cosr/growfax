@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Growfax Host</title>
     <style>
-        /* Gaya Dasar */
+        /* Base Style */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -17,7 +17,7 @@
         
         /* Header */
         header {
-            background-color: #4CAF50; /* Warna hijau */
+            background-color: #4CAF50; /* Green color */
             color: white;
             padding: 20px 0;
             margin-bottom: 20px;
@@ -26,7 +26,7 @@
             margin: 0;
         }
         
-        /* Kontainer Utama */
+        /* Main Container */
         .container {
             width: 90%;
             max-width: 1000px;
@@ -35,22 +35,22 @@
             padding: 20px 0;
         }
         
-        /* Daftar Item Host */
+        /* Host Item List */
         .host-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px; /* Jarak antar item */
+            gap: 20px; /* Space between items */
         }
         
-        /* Item Host */
+        /* Host Item */
         .host-item {
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: calc(50% - 20px); /* 2 item per baris untuk layar lebar */
-            max-width: 200px; /* Batasan lebar agar tidak terlalu besar */
+            width: calc(50% - 20px); 
+            max-width: 200px; 
             text-align: center;
             transition: transform 0.2s;
             box-sizing: border-box;
@@ -69,7 +69,7 @@
             height: 100%;
         }
         
-        /* Ikon Aplikasi */
+        /* Application Icon */
         .host-icon {
             width: 80px;
             height: 80px;
@@ -78,7 +78,7 @@
             object-fit: contain;
         }
 
-        /* Tombol Download/Gabung */
+        /* Download/Join Button */
         .download-button {
             display: block;
             background-color: #008CBA;
@@ -97,9 +97,9 @@
             background-color: #005f7b;
         }
 
-        /* Gaya Khusus Discord */
+        /* Discord Specific Style */
         .discord-item {
-            background-color: #7289DA !important; /* Warna ungu/biru Discord */
+            background-color: #7289DA !important; /* Discord's purple/blue color */
             color: white;
         }
         .discord-item a {
@@ -112,10 +112,10 @@
             background-color: #7d8f99;
         }
 
-        /* Media Query untuk Layar Kecil (mis. Ponsel) */
+        /* Media Query for Small Screens (e.g., Mobile) */
         @media (max-width: 600px) {
             .host-item {
-                width: 100%; /* 1 item per baris di layar kecil */
+                width: 100%; 
                 max-width: none;
             }
             .container {
@@ -128,7 +128,7 @@
 
     <header>
         <h1>Growfax Host</h1>
-        <p>Pilih file host yang ingin Anda unduh atau gabung ke Discord kami.</p>
+        <p>Select the host file you wish to download or join our Discord.</p>
     </header>
 
     <div class="container">
@@ -136,37 +136,37 @@
             
             <div class="host-item">
                 <a href="GrowFax.txt" download>
-                    <img src="IMG_2970.jpeg" alt="Icon GrowFax" class="host-icon">
-                    <h3>Host GrowFax</h3>
-                    [cite_start]<p>File host untuk GrowFax[cite: 1].</p>
+                    <img src="IMG_2970.jpeg" alt="GrowFax Icon" class="host-icon">
+                    <h3>GrowFax Host</h3>
+                    <p>Host file for the GrowFax app.</p>
                     <span class="download-button">Download Host</span>
                 </a>
             </div>
 
             <div class="host-item">
                 <a href="Ios.txt" download>
-                    <img src="IMG_2972.png" alt="Icon iOS" class="host-icon">
-                    <h3>Host iOS Config</h3>
-                    [cite_start]<p>File konfigurasi host untuk iOS/alat lainnya[cite: 3].</p>
+                    <img src="IMG_2972.png" alt="iOS Icon" class="host-icon">
+                    <h3>iOS Host Config</h3>
+                    <p>Host configuration file for iOS/other tools.</p>
                     <span class="download-button">Download Host</span>
                 </a>
             </div>
             
             <div class="host-item">
                 <a href="Powertunnel.txt" download>
-                    <img src="IMG_2969.png" alt="Icon Powertunnel" class="host-icon">
-                    <h3>Host Powertunnel</h3>
-                    [cite_start]<p>File host untuk Powertunnel[cite: 2].</p>
+                    <img src="IMG_2969.png" alt="Powertunnel Icon" class="host-icon">
+                    <h3>Powertunnel Host</h3>
+                    <p>Host file for the Powertunnel app.</p>
                     <span class="download-button">Download Host</span>
                 </a>
             </div>
 
             <div class="host-item discord-item">
                 <a href="https://discord.gg/smgS6sq83y" target="_blank">
-                    <img src="IMG_2973.png" alt="Icon Discord" class="host-icon" style="background-color: transparent;">
-                    <h3 style="color: white;">Discord Komunitas</h3>
-                    <p>Gabung ke server Discord kami.</p>
-                    <span class="download-button">Gabung Sekarang</span>
+                    <img src="IMG_2973.png" alt="Discord Icon" class="host-icon" style="background-color: transparent;">
+                    <h3 style="color: white;">Community Discord</h3>
+                    <p>Join our Discord server now!</p>
+                    <span class="download-button">Join Now</span>
                 </a>
             </div>
 
